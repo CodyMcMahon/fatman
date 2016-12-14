@@ -13,10 +13,13 @@ window.requestAnimFrame = (function () {
 function startup(){
   screen = document.getElementById("mat");
   paint_brush = screen.getContext("2d");
-  screen.addEventListener('keydown',keyDown,false);
+  screen.addEventListener("keydown",keyDown,false);
+  screen.addEventListener("mousedown", mouseDown, false);
   screen.addEventListener('keyup',keyUp,false);
   game = new_game();
   window.setInterval(update_state, 1000/30);
+  //screen.contentEditable=true;
+  screen.focus();
   (function animationLOOP() {
         drawState();
         requestAnimFrame(animationLOOP, screen);

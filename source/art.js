@@ -42,6 +42,25 @@ function drawState(){
   paint_brush.drawImage(img_fatman,
                         get_draw_x(fatman),
                         get_draw_y(fatman),
-                        UNIT,UNIT);
-  
+                        UNIT,UNIT);  
+                        
+  paint_brush.drawImage(img_panel_background,
+                        630,0,
+                        180,810);
+  paint_brush.drawImage(img_panel_stats,
+                        630,200,
+                        180,420);                     
+  draw_time();
+  paint_brush.drawImage(get_num_img(level),
+                        710,550,
+                        30,
+                        30);
+  paint_brush.drawImage(img_food_counter,
+                        660,250,
+                        102,
+                        60);
+  paint_brush.drawImage(img_food_slider,
+                        729-Math.floor((food_left/max_food)*52),260,
+                        9,
+                        15);
 }

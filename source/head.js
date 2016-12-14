@@ -5,12 +5,14 @@ var UNIT = 30;
 var gameheight = 27;
 var gamewidth = 21;
 var food_left = 0;
+var max_food = 198;
 var badguy1;
 var badguy2;
 var badguy3;
 var badguy4;
 var fatman;
-
+var time;
+var level = 1;
 
 var keyboard = {
   pressed: false,

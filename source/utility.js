@@ -19,7 +19,8 @@ function get_draw_y(guy){
   }
 }
 function new_game(){ 
-  food_left = 197;
+  food_left = 198;
+  time = 0;
   badguy1 = {
     dir : dir.W,
     state : badguystate.alive,
@@ -30,37 +31,37 @@ function new_game(){
     canmove : true,
   };
   badguy2 = {
-    dir : dir.S,
+    dir : dir.E,
     state : badguystate.alive,
     x : 9,
     y : 12,
     speed : 2,
     dist : 0,
-    canmove : false,
+    canmove : true,
   };
   badguy3 = {
-    dir : dir.S,
+    dir : dir.E,
     state : badguystate.alive,
     x : 10,
     y : 12,
     speed : 2,
     dist : 0,
-    canmove : false,
+    canmove : true,
   };
   badguy4 = {
-    dir : dir.S,
+    dir : dir.W,
     state : badguystate.alive,
     x : 11,
     y : 12,
     speed : 2,
     dist : 0,
-    canmove : false,
+    canmove : true,
   };
   fatman = {
     dir : dir.W,
     x : 10,
     y : 19,
-    speed : 2,
+    speed : 5,
     dist : 0,
     canmove : true,
     wantchange : false,
