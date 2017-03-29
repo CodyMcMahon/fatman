@@ -6,7 +6,7 @@ function youlose(){
   alert("you lose");
 }
 function youwin(){
-  alert("YOU WIN YAY");
+  game = new_level();
 }
 function eatfood(x,y){
   game[y][x] = 9;
