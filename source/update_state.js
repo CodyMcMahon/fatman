@@ -3,6 +3,7 @@ function scarebadguys(){
 }
 function youlose(){
   alert("you lose");
+  FREEZE_GAME = 1;
 }
 function youwin(){
   alert("YOU WIN YAY");
@@ -157,7 +158,7 @@ function step(guy){
   }
  }
 function update_state(){
-    
+  if(FREEZE_GAME)return;
   time+=1;
   var guy = fatman;
   if(fatman.canmove){

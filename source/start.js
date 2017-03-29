@@ -22,6 +22,7 @@ function startup(){
   screen.focus();
   (function animationLOOP() {
         drawState();
+        if(FREEZE_GAME)return;
         requestAnimFrame(animationLOOP, screen);
   })();
 }
