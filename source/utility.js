@@ -19,6 +19,7 @@ function get_draw_y(guy){
   }
 }
 function new_game(){ 
+  opening = 0;
   food_left = 198;
   time = 0;
   badguy1 = {
@@ -100,6 +101,7 @@ function new_level(){
   level += 1;
   food_left = 198;
   time = 0;
+  BAD_GUYS_DEAD = 0;
   badguy1 = {
     dir : dir.W,
     state : badguystate.alive,

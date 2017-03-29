@@ -8,6 +8,10 @@ function switch_direction(d){
 }
 function mouseDown(e){
   screen.focus();
+  if(FREEZE_GAME){
+    game = new_game();
+    FREEZE_GAME = 0;
+  }
 }
 function keyDown(e){
   //alert(e.keyCode);

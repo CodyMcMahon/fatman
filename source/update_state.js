@@ -1,9 +1,12 @@
 function scarebadguys(){
-  //bad guys run away
+  BAD_GUYS_DEAD = 1;
+  BAD_GUYS_DEAD_FOR = Math.floor(300/level);
 }
 function youlose(){
-  FREEZE_GAME = 1;
-  alert("you lose");
+  if(!BAD_GUYS_DEAD){
+    FREEZE_GAME = 1;  
+    //alert("you lose");
+  }
 }
 function youwin(){
   game = new_level();
@@ -159,6 +162,12 @@ function step(guy){
  }
 function update_state(){
   if(FREEZE_GAME)return;
+  if(BAD_GUYS_DEAD){
+    BAD_GUYS_DEAD_FOR-=1;
+    if(BAD_GUYS_DEAD_FOR == 0){
+      BAD_GUYS_DEAD = 0;
+    }
+  }
   time+=1;
   var guy = fatman;
   if(fatman.canmove){

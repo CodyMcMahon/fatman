@@ -16,15 +16,16 @@ function startup(){
   screen.addEventListener("keydown",keyDown,false);
   screen.addEventListener("mousedown", mouseDown, false);
   screen.addEventListener('keyup',keyUp,false);
-  game = new_game();
+  //game = new_game();
   window.setInterval(update_state, 1000/30);
   //screen.contentEditable=true;
   screen.focus();
   (function animationLOOP() {
-        drawState();
         if(FREEZE_GAME){
-          //alert("TEST");
-          return;
+          draw_game_over();
+        }
+        else{
+          drawState();
         }
         requestAnimFrame(animationLOOP, screen);
   })();

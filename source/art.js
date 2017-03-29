@@ -19,31 +19,12 @@ function drawState(){
       paint_brush.drawImage(thing,x*UNIT,y*UNIT,UNIT,UNIT);
     }
   }
-  paint_brush.drawImage(img_badguy1,
-                        get_draw_x(badguy1),
-                        get_draw_y(badguy1),
-                        UNIT,UNIT);
-                        
-  paint_brush.drawImage(img_badguy2,
-                        get_draw_x(badguy2),
-                        get_draw_y(badguy2),
-                        UNIT,UNIT);
-                        
-  paint_brush.drawImage(img_badguy3,
-                        get_draw_x(badguy3),
-                        get_draw_y(badguy3),
-                        UNIT,UNIT);
-                        
-  paint_brush.drawImage(img_badguy4,
-                        get_draw_x(badguy4),
-                        get_draw_y(badguy4),
-                        UNIT,UNIT);
-                        
   paint_brush.drawImage(img_fatman,
                         get_draw_x(fatman),
                         get_draw_y(fatman),
                         UNIT,UNIT);  
                         
+  draw_bad_guys();
   paint_brush.drawImage(img_panel_background,
                         630,0,
                         180,810);
@@ -63,4 +44,12 @@ function drawState(){
                         729-Math.floor((food_left/max_food)*52),260,
                         9,
                         15);
+}
+function draw_game_over(){
+  if(opening){
+    paint_brush.drawImage(img_start_screen,0,0,810,810);
+  }
+  else{
+    paint_brush.drawImage(img_game_over_screen,0,0,810,810);
+  }
 }

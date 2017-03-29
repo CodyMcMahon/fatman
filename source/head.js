@@ -13,7 +13,10 @@ var badguy4;
 var fatman;
 var time;
 var level = 1;
-var FREEZE_GAME = 0;
+var FREEZE_GAME = 1;
+var BAD_GUYS_DEAD = 0;
+var BAD_GUYS_DEAD_FOR = 0;
+var opening = 1;
 
 var keyboard = {
   pressed: false,
