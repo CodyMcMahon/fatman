@@ -2,8 +2,8 @@ function scarebadguys(){
   //bad guys run away
 }
 function youlose(){
-  alert("you lose");
   FREEZE_GAME = 1;
+  alert("you lose");
 }
 function youwin(){
   alert("YOU WIN YAY");
