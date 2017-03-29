@@ -20,6 +20,7 @@ function get_draw_y(guy){
 }
 function new_game(){ 
   opening = 0;
+  level = 1;
   food_left = 198;
   time = 0;
   badguy1 = {
@@ -100,7 +101,6 @@ function new_level(){
   var new_speed = badguy1.speed*2;
   level += 1;
   food_left = 198;
-  time = 0;
   BAD_GUYS_DEAD = 0;
   badguy1 = {
     dir : dir.W,
